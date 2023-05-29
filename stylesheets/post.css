@@ -1,0 +1,177 @@
+h2{
+    margin: 210px 0px 50px;
+    text-align: center;
+}
+
+
+#post{
+    width: 70%;
+}
+
+#post form, .col-lab, article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#default-album{
+    width: 198px;
+    height: 198px;
+    border: 1px solid var(--color-dark);
+}
+
+#review-container, .row-lab, #review{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#review-container{
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+#review-container label{
+    margin: 15px;
+    padding: 15px;
+    background-color: var(--color-light);
+
+}
+
+#review{
+    padding: 20px;
+    align-items: flex-end;
+    background-color: var(--color-light);
+    position: relative;
+}
+
+#review label{
+    padding: 10px;
+    margin: 0px;
+
+    background-color: var(--color-light);
+}
+
+input{
+    font-family: 'Lexend', sans-serif;
+    border: none;
+}
+
+label{
+    font-size: 1rem;
+}
+
+#post-title{
+    border: none;
+    border-bottom: 2px solid var(--color-dark);
+
+    width: 100%;
+    height: 30px;
+    
+    background-color: var(--color-bluegray);
+    color: var(--color-light);
+
+    text-align: center;
+
+    font-size: 1rem;
+}
+
+#post-title::placeholder{
+    color: var(--color-light);
+}
+
+#review .col-lab input{
+    width: 100%;
+    margin-top: 10px;
+
+    box-sizing: border-box;
+
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid var(--color-dark);
+    text-align: center;
+}
+
+.row-lab{
+    align-items: center;
+}
+
+.row-lab input{
+    text-align: right;
+    font-size: 1rem;
+    margin-left: 10px;
+    width: 50px;
+}
+
+textarea{
+    width: 70%;
+    height: 250px;
+    padding: 20px;
+
+    text-align: left;
+
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+
+    resize: none;
+}
+
+/*.ok-button{
+    background-color: var(--color-bluegray);
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    margin: 20px 0px;
+
+
+    border-radius: 25px;
+
+    color: var(--color-navy);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ok-button:hover{
+    background-color: var(--color-coralhover);
+
+    cursor: pointer;
+}
+*/
+#overlay{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-light);
+    opacity: 0.8;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.hidden{
+    display: none;
+}
+
+.error, #review .col-lab input.error, #post-title.error{
+    background-color: var(--color-coralhover);
+    border: 1px solid var(--color-coral);
+}
+
+@media(max-width: 700px){
+    div#review-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 500px){
+    div#review{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,135 @@
+#search-info{
+    margin: 210px 0px 50px;
+    text-align: center;
+}
+
+article, .event{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#toggle-search{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 10px;
+    height: 40px;
+    background-color: var(--color-coral);
+    color: var(--color-dark);
+    font-weight: bold;
+    border-radius: 25px;
+
+}
+
+#toggle-search:hover, .event a:hover{
+    background-color: var(--color-coralhover);
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#search-container input{
+    background-color: var(--color-bluegray);
+    font-family: 'Lexend', sans-serif;
+    color: var(--color-light);
+}
+
+#search-container input::placeholder{
+    color: var(--color-light);
+
+}
+
+.event{
+    text-align: center;
+    margin: 0px;
+    padding: 30px;
+    margin: 30px;
+
+    background-color: var(--color-light);
+
+    border: 1px solid var(--color-navy);
+    border-radius: 10px;
+    color: var(--color-dark);
+
+    width: 50%;
+}
+
+.event h3, .event h4{
+    background-color: rgba(57, 72, 103, 0.3);
+    padding: 5px;
+    margin: 20px 0px 0px;
+
+    width: 100%;
+}
+
+.event h6, .event a{
+    background-color: rgba(33, 42, 62, 0.7);
+    color: var(--color-light);
+    padding: 10px;
+    margin: 10px 0px 30px;
+    border-radius: 20px;
+
+
+}
+
+#search-again{
+
+    background-color: var(--color-coral);
+    /*border: 3px solid var(--color-dark);*/
+    border-radius: 60px;
+
+    width: 120px;
+
+    text-align: center;
+    color: var(--color-dark);
+
+    font-size: 1.5rem;
+
+    margin: 20px;
+
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-again:hover{
+    background-color: var(--color-coralhover);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+section h2{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media(max-width: 500px){
+    div.event{
+        width: 90%;
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,234 @@
+section#show-chat, div.friend{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+section#show-chat{
+    justify-content: space-between;
+    width: calc(80% - 5px);
+
+    padding: 5px;
+}
+
+#friend-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: var(--color-bluegray);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color-dark);
+    box-sizing: border-box;
+
+}
+
+#friend-search form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 20px;
+}
+
+#search-box, #search-submit{
+    background-color: white;
+}
+
+#friend-list{
+    width: 240px;
+}
+
+div.friend{
+    width: 230px;
+
+    margin: 0px 0px 15px;
+    padding: 5px;
+    border-radius: 5px;
+
+    position: relative;
+
+    background-color: var(--color-navy);
+    color: var(--color-light);
+
+}
+
+div.friend:hover{
+    cursor: pointer;
+}
+
+div.alt-style{
+    background-color: var(--color-light);
+    color: var(--color-navy);
+}
+
+div.friend img{
+    height: 35px;
+    width: 35px;
+    border: 2.5px solid var(--color-dark);
+    background-color: var(--color-light);
+
+    border-radius: 100%;
+}
+
+div#chatbox{
+    width: 100%;
+    margin: 0px 10px;
+
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: var(--color-light);
+    
+}
+
+h3.friend-name{
+    margin: 0px 0px 0px 10px;
+    font-size: 1rem;
+}
+
+.unread{
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-coral); 
+    border-radius: 100%;
+    position: absolute;
+    right: 5px;
+    color: var(--color-light);
+
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.unread:hover{
+    background-color: var(--color-coralhover);
+    color: var(--color-coral);
+    cursor: pointer;
+
+}
+
+#conversation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.msg{
+    display: inline-block;
+    padding: 5px;
+
+    max-width: 40%;
+
+    font-size: 0.8rem;
+    border-radius: 10px;
+
+    flex-grow: 1;
+}
+
+.received{
+    text-align: left;
+
+    background-color: white;
+    color: var(--color-dark);
+
+    margin: 20px 60% 0px 0px;
+
+}
+
+.sent{
+    text-align: right;
+
+    background-color: var(--color-dark);
+    color: white;
+
+    margin: 20px 0px 0px 60%;
+}
+
+#chatbox form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 20px 0px 0px;
+}
+
+#chatbox .searchbox-send{
+    background-color: var(--color-coralhover);
+    background-image: url("http://localhost/homework1/images/svgicons/msg.svg");
+}
+
+#chatbox .user-searchbox{
+    width: calc(80% - 30px);
+    border: 1px solid var(--color-navy);
+}
+
+#search-info{
+    text-align: center;
+    font-weight: bold;
+
+    color: var(--color-navy);
+
+    background-color: rgba(241, 246, 249, 0.5);
+}
+
+#chatbox h2{
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    background-color: rgba(155, 164, 181, 0.5);
+    border-bottom: 1px solid var(--color-dark);
+}
+
+#filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#filters p{
+    font-size: 0.85rem;
+    width: 30%;    
+}
+
+@media(max-width: 800px){
+    section#show-chat{
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+    div#friend-search, div#friend-list, p#search-info, section#show-chat{
+        width: 100%;
+    }
+
+    div#friend-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    div.friend {
+        width: calc(33% - 30px);
+        margin: 0px 5px 15px;
+    }
+    h3.friend-name{
+        font-size: 0.7rem;
+    }
+}
+
+@media(max-width: 600px){
+    h3.friend-name{
+        font-size: 0.5rem;
+    }
+    div.friend img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media(max-width: 430px){
+    div.friend {
+        width: calc(50% - 20px);
+    }
+}
